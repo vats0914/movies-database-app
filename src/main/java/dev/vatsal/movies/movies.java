@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import java.util.List;
 
-@Document(collation = "movies")
+@Document(collection = "movies")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,7 +25,7 @@ public class movies {
     private List<String> genres;
     private List<String> backDrops;
     @DocumentReference
-    private List<String> reviewIds;
+    private List<Review> reviewIds;
 
 
 
